@@ -3,5 +3,132 @@
 @import 'reset';
 @import 'global';
 
+.header {
+
+    // .header__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 55px 0;
+    }
+}
+
+.container {}
+
+.logo {
+    font-size: 36px;
+    line-height: 58px;
+    color: #436372;
+    display: flex;
+
+    // .logo__img
+
+    &__img {}
+
+    &__text {
+        margin-left: 10px;
+    }
+}
+
+.menu {
+
+    // .menu__list
+
+    &__list {
+        display: flex;
+    }
+
+    // .menu__list-item
+
+    &__list-item+.menu__list-item {
+        padding-left: 35px;
+    }
+
+    // .menu__list-link
+
+    &__list-link {
+        font-size: 15px;
+        line-height: 12px;
+        color: #436372;
+        @extend %Rubik-500;
+        font-weight: 700;
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    // .user-nav__link
+
+    &__link {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 52px;
+    }
+
+    &__link:first-child {
+        background-color: #edf1f4;
+    }
+
+    &__link:last-child {
+        background-color: #a3bbc8;
+        line-height: 58px;
+    }
+
+    //.user-nav__inner
+
+    &__inner {
+        margin: 0 20px;
+        background-color: #fcd7b6;
+        height: 50px;
+        display: flex;
+        border-radius: 25px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+
+        .user-nav__link {
+            background-color: transparent;
+            margin-bottom: -10px;
+            padding: 0 30px;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    //user-nav__divider
+
+
+    &__divider {
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.4);
+        height: 32px;
+    }
+
+
+    // .user-nav__img
+
+    &__img {}
+
+    // .user-nav__num
+
+    &__num {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+}
+
+
 
 @import 'media';
