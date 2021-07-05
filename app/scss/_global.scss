@@ -3,13 +3,8 @@ body {
     line-height: 30px;
     color: $default;
     @extend %Rubik-400;
-    display: grid;
-    grid-template-areas:
-        'header'
-        'main'
-        'footer'
-    ;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -24,14 +19,6 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    grid-area: header;
-}
-
 .main {
-    grid-area: main;
-}
-
-.footer {
-    grid-area: footer;
+    flex: 1 0;
 }

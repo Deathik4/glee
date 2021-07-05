@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 
 .header {
 
@@ -117,6 +118,98 @@
         right: 16px;
     }
 }
+
+.top-slider {
+
+    // .top-slider__inner
+
+    &__inner {
+        background-color: #fcd7b6;
+        padding: 90px 0 40px;
+    }
+
+    // .top-slider__item
+
+    &__item {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    &__content {
+        width: 420px;
+        margin-right: 100px;
+        margin-top: 120px;
+    }
+
+    // .top-slider__title
+
+    &__title {
+        color: $default;
+        font-size: 72px;
+        line-height: 70px;
+        @extend %Rubik-500;
+        margin-bottom: 40px;
+    }
+
+    // .top-slider__text
+
+    &__text {
+        color: #436372;
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    // .top-slider__link
+
+    &__link {
+        font-size: 15px;
+        line-height: 12px;
+        color: #fff;
+        @extend %Rubik-500;
+        padding: 20px 100px 20px 25px;
+        background-color: #a3bbc8;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../images/slider/arrow-right.svg');
+            width: 22px;
+            height: 9px;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+
+        li {
+
+            button {
+                border: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: rgba($color: #fff, $alpha: 0.5);
+                margin: 0 6px;
+                font-size: 10px;
+                color: #243f4d;
+                @extend %Rubik-500;
+            }
+
+            &.slick-active {
+                button {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
 
 .footer-top {
     padding: 75px 0;
