@@ -271,34 +271,7 @@
         margin-bottom: 35px;
     }
 
-    // .products__filter
 
-    &__filter {
-        margin-bottom: 80px;
-        display: flex;
-        justify-content: center;
-    }
-
-    // .products__filter-link
-
-    &__filter-link {
-        color: #8b8b8b;
-        @extend %DMSans-700;
-        border: none;
-        background-color: transparent;
-
-        &:hover {
-            color: $title;
-        }
-
-        &--active {
-            color: $title;
-        }
-    }
-
-    &__filter-link+.products__filter-link {
-        margin-left: 30px;
-    }
 
     // .products__items
 
@@ -478,8 +451,60 @@
             }
         }
     }
-
 }
+
+.design {
+    padding: 100px 0 120px;
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    // .design__items
+
+    &__items {
+        display: grid;
+        grid-template: repeat(2, 250px)/repeat(3, 370px);
+        gap: 35px 30px;
+    }
+
+    // .design__item
+
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        @extend %DMSans-700;
+        padding: 40px 0 0 30px;
+    }
+
+    // .design__item-title
+
+    &__item-title {
+        font-size: 20px;
+        color: $title;
+        width: 170px;
+        margin-bottom: 10px;
+    }
+
+    // .design__item-subtitle
+
+    &__item-subtitle {
+        color: $accent;
+    }
+}
+
+.video {
+    background-image: url('../images/video-bg.jpg');
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__play {}
+}
+
+
+
 
 .footer-top {
     padding: 75px 0;
