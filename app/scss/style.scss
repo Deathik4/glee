@@ -618,6 +618,10 @@
     background-color: #fef7f0;
     padding: 265px 0 90px;
 
+    &--login-page {
+        padding: 80px 0 90px;
+    }
+
     // .partners__list
 
     &__list {
@@ -756,5 +760,107 @@
         width: 1px;
     }
 }
+
+.top {
+    padding: 30px 0;
+    background-color: #edf1f4;
+
+    // .top__title
+
+    &__title {
+        @extend %Rubik-400;
+        font-weight: 300;
+        color: #222933;
+        margin-bottom: 10px;
+    }
+}
+
+.modal {
+    padding: 120px 0;
+    max-width: 475px;
+    margin: 0 auto;
+
+    // .modal__form
+
+    &__form {}
+
+    // .modal__label
+
+    &__label {
+        font-size: 14px;
+        color: #436372;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        border: 2px solid #ccc;
+        // width: 466px;
+        height: 56px;
+        padding: 0 10px;
+    }
+
+    // .modal__btn
+
+    &__btn {
+        margin-top: 35px;
+        @extend %Rubik-500;
+        font-size: 18px;
+        padding: 20px 0;
+        background-color: $accent;
+        display: block;
+        width: 100%;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+
+    // .modal__info
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        color: #436372;
+        font-size: 14px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #f6f6f6;
+
+        .modal__label {
+            margin-bottom: 0;
+        }
+    }
+
+    // .modal__lost
+
+    &__lost {
+        color: #436372;
+    }
+
+    // .modal__register
+
+    &__register {
+        color: #436372;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        display: block;
+    }
+
+    // .modal__create
+
+    &__create {
+        display: block;
+        @extend %Rubik-500;
+        font-size: 18px;
+        color: $default;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        border: 2px solid $accent;
+    }
+}
+
 
 @import 'media';
