@@ -503,8 +503,133 @@
     &__play {}
 }
 
+.blog {
+    padding: 115px 0 0;
+    margin-bottom: -213px;
 
+    // .blog__top
 
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    // .blog__title
+
+    &__title {}
+
+    // .blog__link
+
+    &__link {
+        @extend %DMSans-700;
+        color: #262626;
+        padding-right: 30px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../images/icons/arrow-right-blog.svg');
+            width: 7px;
+            height: 12px;
+            top: 7px;
+            right: 0;
+            background-repeat: no-repeat;
+        }
+    }
+
+    // .blog__items
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .blog__item
+
+    &__item {
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+        border-radius: 5px;
+        position: relative;
+        max-width: 370px;
+        background-color: #fff;
+    }
+
+    // .blog__item-img
+
+    &__item-img {}
+
+    // .blog__item-type
+
+    &__item-type {
+        @extend %DMSans-700;
+        color: #fff;
+        background-color: $accent;
+        border-radius: 50px;
+        padding: 8px 30px;
+        position: absolute;
+        top: 225px;
+        left: 30px;
+        display: inline-block;
+    }
+
+    // .blog__item-content
+
+    &__item-content {
+        padding: 30px;
+    }
+
+    // .blog__descr
+
+    &__descr {
+        color: #262626;
+        @extend %DMSans-500;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    &__item-info {
+        display: flex;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        @extend %Rubik-400;
+        font-size: 12px;
+        line-height: 30px;
+        color: #222933;
+        text-transform: uppercase;
+    }
+
+    // .blog__item-date
+
+    &__item-date {
+        margin-right: 30px;
+    }
+
+    // .blog__item-author
+
+    &__item-author {
+        color: #222933;
+    }
+}
+
+.partners {
+    background-color: #fef7f0;
+    padding: 265px 0 90px;
+
+    // .partners__list
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    // .partners__item
+
+    &__item {}
+}
 
 .footer-top {
     padding: 75px 0;
