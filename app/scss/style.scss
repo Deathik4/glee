@@ -271,6 +271,31 @@
         margin-bottom: 35px;
     }
 
+    &__filter {
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__filter-link {
+        color: #8b8b8b;
+        @extend %DMSans-700;
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            color: $title;
+        }
+
+        &--active {
+            color: $title;
+        }
+
+        &+.products__filter-link {
+            margin-left: 30px;
+        }
+    }
+
 
 
     // .products__items
@@ -861,6 +886,312 @@
         border: 2px solid $accent;
     }
 }
+
+.shop {
+    padding: 120px 0;
+
+    &__inner {
+        display: flex;
+    }
+}
+
+.filter {
+
+    &__item {
+        margin-bottom: 70px;
+    }
+
+    &__title {
+        @extend %DMSans-700;
+        font-size: 18px;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 30px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 2px;
+            background-color: $accent;
+            border-radius: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+    }
+
+}
+
+.filter-category {
+    &__title {
+        padding-right: 70px;
+    }
+
+    &__input {
+        @extend %checkbox-hidden;
+
+        &:checked+.filter-category__checkbox {
+            background-color: #edf1f4;
+        }
+    }
+
+    &__label {
+        width: 270px;
+        display: block;
+    }
+
+    &__checkbox {
+        padding: 15px 22px 15px 15px;
+        background-color: #fff;
+        position: relative;
+        border-radius: 5px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../images/icons/arrow-right-shop.svg');
+            width: 5px;
+            height: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+        }
+    }
+}
+
+.filter-price {
+    margin-bottom: 90px;
+
+    // .filter-price__title
+
+    &__title {
+        padding-right: 53px;
+    }
+
+    // .filter-price__label
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+
+    .irs--flat .irs-line {
+        top: 0;
+        height: 3px;
+        background-color: $accent;
+        border-radius: 5px;
+        background-color: rgba($accent, 0.6);
+    }
+
+    .irs--flat .irs-bar {
+        top: -1px;
+        height: 5px;
+        background-color: $accent;
+    }
+
+    .irs--flat .irs-handle {
+        top: -5px;
+        width: 16px;
+        height: 15px;
+        background-color: $accent;
+    }
+
+    .irs--flat .irs-from,
+    .irs--flat .irs-to,
+    .irs--flat .irs-single,
+    .irs--flat .irs-min,
+    .irs--flat .irs-max,
+    .irs--flat .irs-handle>i:first-child {
+        display: none;
+    }
+
+    .irs--flat {
+        height: 0px;
+    }
+
+}
+
+.filter-brand {
+
+    // .filter-brand__title
+
+    &__title {
+        padding-right: 58px;
+    }
+
+    // .filter-brand__form
+
+    &__form {}
+
+    // .filter-brand__label
+
+    &__label {
+        width: 270px;
+    }
+
+    // .filter-brand__input
+
+    &__input {
+        @extend %checkbox-hidden;
+
+        &:checked+.filter-brand__checkbox {
+            background-color: #edf1f4;
+
+            .filter-brand__checkbox-num {
+                color: $default;
+            }
+        }
+    }
+
+    // .filter-brand__checkbox
+
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 25px 15px 15px;
+        border-radius: 5px;
+    }
+
+    &__checkbox-num {
+        color: #b3b3b3;
+    }
+}
+
+.filter-products {
+
+    // .filter-products__title
+
+    &__title {
+        padding-right: 80px;
+    }
+
+    // .filter-products__item
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        max-width: 180px;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .filter-products__img-box
+
+    &__img-box {
+        border: 2px solid #f2f2f2;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .filter-products__img
+
+    &__img {
+        object-fit: cover;
+    }
+
+    // .filter-products__content
+
+    &__content {
+        padding: 6px 0 5px;
+    }
+
+    // .filter-products__item-title
+
+    &__item-title {
+        font-size: 14px;
+        color: #333;
+        line-height: 16px;
+        margin-bottom: 8px;
+    }
+
+    // .filter-products__star
+
+    &__star {
+        padding: 0;
+    }
+
+    // .filter-products__price
+
+    &__price {
+        font-size: 15px;
+        color: #333;
+        line-height: 1;
+        margin-top: 8px;
+    }
+
+    .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg {
+        margin: 0 5px;
+    }
+
+    .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group>svg:first-child {
+        margin: 0 5px 0 0;
+    }
+
+    .jq-ry-container {
+        width: 78px !important;
+    }
+}
+
+.shop-content {
+    margin-left: 30px;
+    width: 100%;
+    margin-bottom: 100px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .products__item {
+        width: 270px;
+        height: 380px;
+        margin-bottom: 40px;
+    }
+
+    // .shop-content__filter
+
+    &__filter {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+        align-items: center;
+        border: 1px solid #ececec;
+        margin-bottom: 40px;
+    }
+
+    // .shop-content__filter-buttons
+
+    &__filter-buttons {
+        span {
+            color: #8d8d8d;
+        }
+    }
+
+    // .shop-content__filter-btn
+
+    &__filter-btn {
+
+        &.shop-content__filter-btn--active {
+            path {
+                fill: #fe3e57;
+            }
+        }
+    }
+}
+
+
+
+
 
 
 @import 'media';
