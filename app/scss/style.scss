@@ -2678,5 +2678,39 @@
     }
 }
 
+.condition {
+    padding: 120px 0 0;
+
+    &__box {
+        margin-bottom: 70px;
+    }
+
+    // .condition__title
+
+    &__title {
+        @extend %Rubik-700;
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    // .condition__list
+
+    &__list {
+        margin-left: 20px;
+    }
+
+    // .condition__item
+
+    &__item {
+        margin-bottom: 25px;
+    }
+
+    // .condition__text
+
+    &__text {}
+}
+
+
 
 @import 'media';
