@@ -170,6 +170,7 @@
         background-color: #a3bbc8;
         position: relative;
         cursor: pointer;
+        display: inline-block;
 
         &::after {
             content: '';
@@ -524,6 +525,8 @@
 
 .video {
     background-image: url('../images/video-bg.jpg');
+    background-size: cover;
+    background-position: center;
     height: 500px;
     display: flex;
     justify-content: center;
@@ -541,6 +544,7 @@
     &__top {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 40px;
     }
 
@@ -555,6 +559,8 @@
         color: #262626;
         padding-right: 30px;
         position: relative;
+        margin-top: 6px;
+        display: inline-block;
 
         &::after {
             content: '';
@@ -657,6 +663,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     // .partners__item
@@ -700,6 +707,7 @@
     &__email {
         display: block;
         margin-bottom: 15px;
+        color: #7b7b7b;
     }
 
     &__nav {
@@ -723,6 +731,7 @@
     &__list-link {
         font-size: 14px;
         line-height: 32px;
+        color: #7b7b7b;
     }
 
     // .footer-top__text
@@ -765,6 +774,7 @@
     justify-content: space-between;
     padding: 35px 0;
     color: #7b7b7b;
+    align-items: center;
 
     // .footer-bottom__links
 
@@ -779,6 +789,7 @@
         font-size: 14px;
         line-height: 32px;
         padding: 0 15px;
+        color: #7b7b7b;
     }
 
     // .footer-bottom__divider
@@ -1172,7 +1183,7 @@
         align-items: center;
         overflow: hidden;
         height: 497px;
-        column-gap: 60px;
+        gap: 60px;
     }
 
 
@@ -2245,7 +2256,7 @@
 
     &__item {
         width: 370px;
-        height: 381px;
+        min-height: 381px;
         padding: 45px 55px 70px;
         background-color: #fbfbfb;
         text-align: center;
@@ -2683,6 +2694,10 @@
 
     &__box {
         margin-bottom: 70px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     // .condition__title
